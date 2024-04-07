@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+#nav {
+    display: flex;
+    /* background-color: blueviolet; */
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    gap: 45px;
+    padding: 0 80px;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor {
+    height: 7px;
+    width: 7px;
+    background-color: #db1316;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 100;
+}
+
+#cursor-blur {
+    height: 80px;
+    width: 80px;
+    background-color: #db131672;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+}
+
+#nav img {
+    height: 40px;
+    width: 40px;
+}
+
+#nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgb(0, 0, 0, 0.36);
+}
+
+#page1 {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#page1 h1::before {
+    content: "RUNMACHINE KING KOHLI";
+    position: absolute;
+    z-index: -1;
+    color: black;
+    top: 3px;
+    left: -3px;
+    -webkit-text-stroke: 2px #db1316;
+}
+
+#page1 h1 {
+    font-size: 50px;
+    font-weight: 900;
+    position: relative;
+}
+
+#page1 h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+#page1 p {
+    width: 40%;
+}
+
+#page2 {
+    height: 120vh;
+}
+
+#scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 80px;
+    font-size: 900;
+    text-transform: uppercase;
+    transition: all linear 0.3s;
+    color: transparent;
+    margin-right: 10px;
+    -webkit-text-stroke: 2px #ffffff;
+}
+
+#scroller h4:hover {
+    color: #db1316;
+    -webkit-text-stroke: 2px #db1316;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#about{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+#about img{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 20px;  
+}
+#aboutin{
+    text-align: center;
+    width: 40%;
+}
